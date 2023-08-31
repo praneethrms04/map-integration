@@ -2,9 +2,23 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# To get accesstoken please refer this
+
+https://docs.mapbox.com/help/getting-started/access-tokens/
+
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `packages`
+Map box :   https://www.npmjs.com/package/mapbox-gl 
+Styles : https://tailwindcss.com/
+@mapbox/mapbox-gl-draw : https://www.npmjs.com/package/@mapbox/mapbox-gl-draw
+
+### `Docs`
+https://geojson.io/#map=5.69/15.871/77.698
+http://bboxfinder.com/#0.000000,0.000000,0.000000,0.000000
+https://docs.mapbox.com/help/tutorials/use-mapbox-gl-js-with-react/
 
 ### `npm start`
 
