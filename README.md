@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# To get accesstoken please refer this
+
+https://docs.mapbox.com/help/getting-started/access-tokens/
+
 ## Available Scripts
 
 In the project directory, you can run:
