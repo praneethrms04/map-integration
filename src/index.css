@@ -22,3 +22,11 @@ code {
 .mapboxgl-popup {
   max-width: 200px;
   }
+
+  #map {
+    -webkit-tap-highlight-color: rgb(0 0 0/0);
+    font: 12px/20px Helvetica Neue,Arial,Helvetica,sans-serif;
+    /* overflow: hidden; */
+    overflow: visible !important;
+    position: relative;
+  }

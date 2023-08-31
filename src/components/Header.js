@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SearchBar from "./SearchBar";
 
-const Header = ({ searchQuery, setSearchQuery }) => {
+const Header = ({ searchQuery, setSearchQuery, handleReturnClick }) => {
   const [showSearch, setShowSearch] = useState(false);
 
   return (
@@ -20,24 +20,26 @@ const Header = ({ searchQuery, setSearchQuery }) => {
                   setSearchQuery={setSearchQuery}
                 />
               </li>
+              <li className="ms-3">
+                <button
+                  className="rounded-full bg-indigo-300 px-4 py-2"
+                  onClick={handleReturnClick}
+                >
+                  Back To Top
+                </button>
+              </li>
             </ul>
           </nav>
 
           <div className="flex items-center gap-4 relative">
             <div className="sm:flex sm:gap-4">
-              <a
-                className="block rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700"
+              <button
+                className="block rounded-md bg-blue-500 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700"
                 href="/"
               >
-                Login
-              </a>
-
-              <a
-                className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 transition hover:text-teal-600/75 sm:block"
-                href="/"
-              >
-                Register
-              </a>
+                <span className="me-2 font-bold text-xl"> +</span>
+                Add Property
+              </button>
             </div>
             <div className="md:hidden hidden">
               <SearchBar

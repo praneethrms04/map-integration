@@ -3,7 +3,6 @@ import mapboxgl from "mapbox-gl";
 import MapboxDraw from "@mapbox/mapbox-gl-draw";
 import "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css";
 import "mapbox-gl/dist/mapbox-gl.css";
-import SearchBar from "./components/SearchBar";
 import BoroughCard from "./components/BoroughCard";
 import { boroughts, initialPolygon } from "./constants";
 import Header from "./components/Header";
@@ -118,22 +117,15 @@ const App = () => {
 
   return (
     <>
-      <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-      <div className="flex flex-col lg:flex-row height ">
-        <div className="lg:flex-1 h-full  rounded-lg bg-gray-100 px-10 py-3">
-          <div className="borought-list h-full overflow-y-auto ">
+      <Header
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        handleReturnClick={handleReturnClick}
+      />
+      <div className="md:flex lg:flex md:flex-row lg:flex-row-reverse height lg:pt-0 md:pt-0 pt-10 mt-5">
+        <div className="lg:flex-1 order-1 rounded-lg bg-gray-100 px-10 py-3">
+          <div className="borought-list  overfo">
             <ul className="space-y-4 p-4">
-              {/* <SearchBar
-                searchQuery={searchQuery}
-                setSearchQuery={setSearchQuery}
-              /> */}
-              <button
-                className="rounded-full bg-indigo-300 px-4 py-2"
-                onClick={handleReturnClick}
-              >
-                Back To Top
-              </button>
-
               {filteredBoroughs.map((borough) => (
                 <BoroughCard
                   key={borough.name}
@@ -144,7 +136,10 @@ const App = () => {
             </ul>
           </div>
         </div>
-        <div className="lg:flex-1 h-full rounded-lg bg-gray-100" id="map"></div>
+        <div
+          className="lg:flex-1 md:h-full lg:h-full rounded-lg bg-gray-100 mapboxgl-gl"
+          id="map"
+        ></div>
       </div>
     </>
   );
