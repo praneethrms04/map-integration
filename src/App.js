@@ -13,7 +13,7 @@ const App = () => {
   const [filteredBoroughs, setFilteredBoroughs] = useState([]);
 
   useEffect(() => {
-    mapboxgl.accessToken = process.env.REACT_APP_YOUR_MAPBOX_KEY;
+    mapboxgl.accessToken = "pk.eyJ1IjoicHJhbmVldGhybXMiLCJhIjoiY2xsd2hycmJlMWw4aTNlb2hncDh5ejB5YyJ9.6Us222C5jPMRitCch6pPHw";
 
     const newMap = new mapboxgl.Map({
       container: "map",
